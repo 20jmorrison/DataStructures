@@ -15,11 +15,7 @@ int main()
     list.insert_at_index(15, 2);   // List: 5 -> 10 -> 15 -> 20 -> 30
     list.print();
 
-    list.remove_at_index(0);
-    list.print();
-    list.remove_at_index(2);
-    list.print();
-    list.remove_at_index(list.size() - 1);
+    list.reverse();
     list.print();
    
     return 0;

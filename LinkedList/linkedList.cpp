@@ -100,6 +100,31 @@ int LinkedList::size()
     return num_nodes;
 }
 
+void LinkedList::reverse()
+{
+    // Do nothing if the list is empty or has only one element
+    if (head == nullptr || head->next == nullptr)
+    {
+        return;
+    }
+
+    Node* prev_node = nullptr;
+    Node* curr_node = head;
+
+    while (curr_node != nullptr)
+    {
+        // Update prev_node
+        prev_node = curr_node->prev;
+
+        // Swap curr_nodes next and prev
+        curr_node->prev = curr_node->next;
+        curr_node->next = prev_node;
+
+        head = curr_node;
+        curr_node = curr_node->prev;
+    }
+}
+
 void LinkedList::print()
 {
     Node* temp = head;

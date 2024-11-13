@@ -12,6 +12,7 @@ class LinkedList
     void insert_at_index(int value, int index);
     void remove_at_index(int index);
     int size();
+    void reverse();
     void print();
 
     private:
